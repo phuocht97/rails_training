@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11.1'
@@ -30,6 +30,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :test do
+
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver', '3.142.7'
+  gem 'capybara', '3.33.0'
+end
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0', require: false
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
