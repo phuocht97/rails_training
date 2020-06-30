@@ -1,3 +1,30 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 col-lg-offset-3">
+			<h1 style="text-align: center; font-weight:900">Sign up</h1>
+			
+			<%= form_for(@user) do |f| %>
+				<%= render 'shared/error_messages' %>
+				<%= f.label :name ,'Name' , class: "lbn_sn" %>
+				<%= f.text_field :name ,class: "form-control input_sn" %>
+
+				<%= f.label :email , class: "lbn_sn"%>
+				<%= f.text_field :email ,class: "form-control input_sn" %>
+
+				<%= f.label :password , class: "lbn_sn"%>
+				<%= f.password_field :password ,class: "form-control input_sn" %>
+							
+				<%= f.label :password_confirmation, "Confirmation password" , class: "lbn_sn"%>
+				<%= f.password_field :password_confirmation ,class: "form-control input_sn" %>
+
+				<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+			<% end %>
+			
+
+			<!-- <%= hidden_field_tag :authenticity_token, form_authenticity_token %> -->
+
+		</div>
+	</div>
+</div>
+
