@@ -35,6 +35,7 @@ gem 'bcrypt-ruby', '~> 3.1.5'
 group :test do
   gem 'selenium-webdriver', '3.142.7'
   gem 'capybara', '3.33.0'
+  gem 'factory_girl_rails', '4.9.0'
 end
 
 group :doc do
