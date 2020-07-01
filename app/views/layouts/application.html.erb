@@ -12,11 +12,6 @@
   <%= render 'layouts/header' %>
   <!-- End Header -->
   <div class="container">
-    <% flash.each do |key, value| %>
-    <div class="alert <%= key %>" role="alert"><%= value %></div>
-      <!-- <div class="alert alert-success<%= key %>"><%= value %></div> -->
-    <% end %>
-
     <%= yield %>
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
