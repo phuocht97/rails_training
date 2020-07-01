@@ -6,9 +6,27 @@
         <ul class="nav pull-right nav__top">
         <li><%= link_to "Home",    root_path %></li>
         <li><%= link_to "Help",    help_path %></li>
-        <li><%= link_to "Sign in", '#' %></li>
+
+        <% if signed_in? %>
+        
+        <li><%= link_to current_user.name, current_user %></li>
+        
+        <li id="fat-menu" class="dropdown">
+          <a id="dd_to" href="#" class="dropdown-toggle dd_to" data-toggle="dropdown">
+            Account <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu dd_con">
+            <li><%= link_to "Profile", current_user, class: "txt_dr" %></li>
+            <li><%= link_to "Settings", '#',class: "txt_dr" %></li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to "Sign out", signout_path, method: "delete", class: "txt_dr" %>
+            </li>
+          </ul>
+        </li>
+      <% else %>
+        <li><%= link_to "Sign in", signin_path %></li>
+      <% end %>        
         </ul>
     </nav>
-    </div>
-</div>
 </header>
