@@ -1,5 +1,11 @@
 <% provide(:title, @user.name)%>
 <div class="row">
+  <% if flash.any? %>
+    <% flash.each do |key, value| %>
+      <div class="thongbaoloi alert <%= key %>" role="alert"><%= value %></div>		  
+    <% end %>				
+    <% flash.discard %>		
+  <% end %>
     <aside class="span4">
       <section>
         <div>
