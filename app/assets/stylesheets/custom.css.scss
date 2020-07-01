@@ -214,3 +214,31 @@ footer {
 .lbn_sn {
   transform: translateY(2px);
 }
+.link_signin {
+  color: rgb(29, 144, 197);
+  &:hover {
+    background-color: transparent;
+    color: rgb(14, 83, 212);
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+.danger_al {
+  background-color: #f8d7da;
+}
+.dd_to {
+
+}
+#dd_to {
+  background-color: transparent !important;
+  &:focus {
+    background-color: transparent !important;
+  }
+}
+.txt_dr {
+  color: black !important;
+  line-height: 35px !important;
+  &:hover {
+    color: rgb(14, 83, 212) !important;
+  }
+}
